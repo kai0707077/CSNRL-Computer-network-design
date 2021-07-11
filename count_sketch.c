@@ -43,8 +43,6 @@ int main(int argc, char **argv)
 
   while (fscanf(ifp1, "%ld",&key)==1)
   {
-    // i++;
-
     //hsah H(x) for slot position
     hash_key1=hash31(3721,917,key)%10000;
     hash_key2=hash31(3167,911,key)%10000;
@@ -60,14 +58,12 @@ int main(int argc, char **argv)
     else{
       hash_table1[hash_key1]--;
     }
-
     if(hash31(3467,503,key)%2 == 0){
       hash_table2[hash_key2]++;
     }
     else{
       hash_table2[hash_key2]--;
     }
-
     if(hash31(1999,859,key)%2 == 0){
       hash_table3[hash_key3]++;
     }
@@ -91,7 +87,7 @@ int main(int argc, char **argv)
       hash_key1=hash31(3721,917,item_name_table[i])%10000;
       hash_key2=hash31(3167,911,item_name_table[i])%10000;
       hash_key3=hash31(3907,127,item_name_table[i])%10000;
-      //4423 127
+
       //caculate mean
       mean = (abs(hash_table1[hash_key1])+abs(hash_table2[hash_key2])+abs(hash_table3[hash_key3]))/3;
       
